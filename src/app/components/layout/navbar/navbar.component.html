@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark navbar-expand-md sticky-top" style="background: rgb(0,61,126)">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/LogoBSTface100x100.png" style="width: 50px;" />
+    </a>
+
+    <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+    <button class="navbar-toggler me-1" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+    </button>
+
+    <!-- Step 2: Add the ngbCollapse directive to the element below. -->
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse text-center">
+        <ul class="navbar-nav text-capitalize" style="font-size: 18px;">
+            <li class="nav-item"><a class="nav-link"  (click)="isMenuCollapsed = true" routerLink="/" routerLinkActive="active">
+                    <i class="fa fa-home"></i>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  routerLink="Tokenomics"
+                    (click)="isMenuCollapsed = true"
+                    routerLinkActive="active">Tokenomics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  (click)="isMenuCollapsed = true" routerLink="Whitepaper" routerLinkActive="active">Whitepaper</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  (click)="isMenuCollapsed = true" routerLink="Roadmap" routerLinkActive="active">Roadmap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  (click)="isMenuCollapsed = true" routerLink="Social-Media" routerLinkActive="active">Social Media</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  (click)="isMenuCollapsed = true" routerLink="About-Us" routerLinkActive="active"><i
+                        class="fa fa-info-circle"></i>About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
