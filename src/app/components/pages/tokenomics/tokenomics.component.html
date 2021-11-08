@@ -9,52 +9,50 @@
                         <div class="card bg-transparent mb-2 mb-sm-0 "
                             style="font-size: 22px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
 
-                            <div class="card-body text-center">
-                                <img src="assets/img/LogoBSTface100x100.png" style="width: 80px;" alt="Brand">
-                            </div>
-                            <h3 class="card-title text-center mb-4">Tokenomics</h3>
-                            <!-- <h3 class="card-title text-center text-truncate mb-4">
-                                ......................................................................
-                            </h3> -->
+                            <h1 class="card-title text-center mt-2 mb-2">Tokenomics</h1>
                         </div>
+
+                        <!-- info tokenomics for pc and phone -->
 
                         <!-- FOR COMPUTER -->
                         <div class="card-group mt-2 mt-sm-0 d-none d-sm-flex">
-
+ 
                             <div class="card bg-transparent"
                                 style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                                <h3 class="card-title text-center mb-3 mt-3">Buy Tax 7%</h3>
-                                <h5 class="card-text mb-3">4 % USDT Rewards</h5>
-                                <h5 class="card-text mb-3">1 % Dev</h5>
-                                <h5 class="card-text mb-3">1 % Marketing</h5>
-                                <h5 class="card-text mb-3">1 % Liquidity Pool</h5>
+                                <h2 class="card-title text-center mb-3 mt-3">Buy Tax 7%</h2>
+                                <h3 class="card-text mb-3">4 % USDT Rewards</h3>
+                                <h3 class="card-text mb-3">1 % Dev</h3>
+                                <h3 class="card-text mb-3">1 % Marketing</h3>
+                                <h3 class="card-text mb-3">1 % Liquidity Pool</h3>
+                            </div>
+
+                            <div class="card bg-transparent" (mouseenter)="hover_counter()"
+                                style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
+                                <h2 class="card-title text-center mb-3 mt-3">TOTAL SUPPLY</h2>
+                                <h3 class="card-text mb-3">{{t_counter[0] | number}} BST</h3> <!-- 2 500 000 000 -->
+                                <h3 class="card-text mb-3">{{t_counter[1] | number}} % Private Sale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[2] | number}} % Presale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[3] | number}} % Public Sale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[4] | number}} % Liquidity Fund</h3>
+                                <h3 class="card-text mb-3">{{t_counter[5] | number}} % Reserve Fund</h3>
+                                <h3 class="card-text mb-3">{{t_counter[6] | number}} % Comunity Pool</h3>
+                                <h3 class="card-text mb-3">{{t_counter[7] | number}} % Team Tokens</h3>
                             </div>
 
                             <div class="card bg-transparent"
                                 style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                                <h3 class="card-title text-center mb-3 mt-3">TOTAL SUPPLY</h3>
-                                <h5 class="card-text mb-3">2 500 000 000 BST</h5>
-                                <h5 class="card-text mb-3">7 % Private Sale</h5>
-                                <h5 class="card-text mb-3">20 % Presale</h5>
-                                <h5 class="card-text mb-3">30 % Public Sale</h5>
-                                <h5 class="card-text mb-3">8 % Liquidity Fund</h5>
-                                <h5 class="card-text mb-3">10 % Reserve Fund</h5>
-                                <h5 class="card-text mb-3">11 % Comunity Pool</h5>
-                                <h5 class="card-text mb-3">14 % Team Tokens</h5>
-                            </div>
-
-                            <div class="card bg-transparent"
-                                style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                                <h3 class="card-title text-center mb-3 mt-3">Sell Tax 13%</h3>
-                                <h5 class="card-text text-danger mb-3">8% USDT Rewards</h5>
-                                <h5 class="card-text text-danger mb-3">3% Liquidity Pool</h5>
-                                <h5 class="card-text text-danger mb-3">2% Auto Burn</h5>
+                                <h2 class="card-title text-center mb-3 mt-3">Sell Tax 13%</h2>
+                                <h3 class="card-text text-danger mb-3"><b>8% USDT Rewards</b></h3>
+                                <h3 class="card-text text-danger mb-3"><b>3% Liquidity Pool</b></h3>
+                                <h3 class="card-text text-danger mb-3"><b>2% Auto Burn</b></h3>
                             </div>
 
                         </div>
 
 
                         <!-- FOR PHONE -->
+
+                        <!-- btn buy tax -->
 
                         <h3 class="text-center d-inline d-sm-none">
                             <button class=" btn btn-outline-light mb-2"
@@ -66,15 +64,15 @@
 
                         <div *ngIf="info1" class="card bg-transparent d-flex d-sm-none mb-2"
                             style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                            <h3 class="card-title text-center mb-3 mt-3">Buy Tax 7%</h3>
-                            <h5 class="card-text mb-3">4 % USDT Rewards</h5>
-                            <h5 class="card-text mb-3">1 % Dev</h5>
-                            <h5 class="card-text mb-3">1 % Marketing</h5>
-                            <h5 class="card-text mb-3">1 % Liquidity Pool</h5>
+                            <h2 class="card-title text-center mb-3 mt-3">Buy Tax 7%</h2>
+                            <h3 class="card-text mb-3">4 % USDT Rewards</h3>
+                            <h3 class="card-text mb-3">1 % Dev</h3>
+                            <h3 class="card-text mb-3">1 % Marketing</h3>
+                            <h3 class="card-text mb-3">1 % Liquidity Pool</h3>
                         </div>
 
 
-
+                        <!-- btn total supply -->
                         <h3 class="text-center d-inline d-sm-none d-inline d-sm-none">
                             <button class=" btn btn-outline-light mb-2"
                                 style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);"
@@ -85,18 +83,18 @@
 
                         <div *ngIf="info2" class="card bg-transparent d-flex d-sm-none mb-2"
                             style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                            <h3 class="card-title text-center mb-3 mt-3">TOTAL SUPPLY</h3>
-                            <h5 class="card-text mb-3">2 500 000 000 BST</h5>
-                            <h5 class="card-text mb-3">7 % Private Sale</h5>
-                            <h5 class="card-text mb-3">20 % Presale</h5>
-                            <h5 class="card-text mb-3">30 % Public Sale</h5>
-                            <h5 class="card-text mb-3">8 % Liquidity Fund</h5>
-                            <h5 class="card-text mb-3">10 % Reserve Fund</h5>
-                            <h5 class="card-text mb-3">11 % Comunity Pool</h5>
-                            <h5 class="card-text mb-3">14 % Team Tokens</h5>
+                            <h2 class="card-title text-center mb-3 mt-3">TOTAL SUPPLY</h2>
+                                <h3 class="card-text mb-3">{{t_counter[0] | number}} BST</h3> <!-- 2 500 000 000 -->
+                                <h3 class="card-text mb-3">{{t_counter[1] | number}} % Private Sale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[2] | number}} % Presale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[3] | number}} % Public Sale</h3>
+                                <h3 class="card-text mb-3">{{t_counter[4] | number}} % Liquidity Fund</h3>
+                                <h3 class="card-text mb-3">{{t_counter[5] | number}} % Reserve Fund</h3>
+                                <h3 class="card-text mb-3">{{t_counter[6] | number}} % Comunity Pool</h3>
+                                <h3 class="card-text mb-3">{{t_counter[7] | number}} % Team Tokens</h3>
                         </div>
 
-
+                        <!-- btn sell tax -->
                         <h3 class="text-center d-inline d-sm-none">
                             <button class=" btn btn-outline-light mb-2"
                                 style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);"
@@ -107,15 +105,11 @@
 
                         <div *ngIf="info3" class="card bg-transparent d-flex d-sm-none"
                             style="font-size: 22px; box-shadow: 0px 0px 10px 1px rgb(255,255,255); min-width: 200px;">
-                            <h3 class="card-title text-center mb-3 mt-3">Sell Tax 13%</h3>
-                            <h5 class="card-text text-danger mb-3">8% USDT Rewards</h5>
-                            <h5 class="card-text text-danger mb-3">3% Liquidity Pool</h5>
-                            <h5 class="card-text text-danger mb-3">2% Auto Burn</h5>
+                            <h2 class="card-title text-center mb-3 mt-3">Sell Tax 13%</h2>
+                            <h3 class="card-text text-danger mb-3"><b>8% USDT Rewards</b></h3>
+                            <h3 class="card-text text-danger mb-3"><b>3% Liquidity Pool</b></h3>
+                            <h3 class="card-text text-danger mb-3"><b>2% Auto Burn</b></h3>
                         </div>
-
-
-
-
 
                     </div>
                 </div>

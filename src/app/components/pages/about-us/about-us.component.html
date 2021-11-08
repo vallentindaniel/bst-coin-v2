@@ -1,11 +1,7 @@
-
-
-
-
 <!-- -------------------ABOUT US---------------------- -->
 <section>
     <div class="container_video mt-5">
-        <div class=" mt-5 mt-md-2 text-center mx-auto text-light">
+        <div class=" mt-5 mt-md-2 text-center mx-auto text-white">
             <div class="container">
                 <div class="row justify-content-center">
 
@@ -13,8 +9,13 @@
                         <div class="card bg-transparent "
                             style="font-size: 22px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-body">
-                                <h3 class="card-title">BST TEAM</h3>
-                                <p class="card-text">
+                                <h2 class="card-title">LET'S MAKE BLOCKCHAIN SAFER TOGETHER</h2>
+
+                                <p 
+                                [ngClass]="{
+                                    'card-text text-start text-truncate text-height': !show1,
+                                    'card-text text-start text-see-more': show1
+                                }" >
                                     The BST project was born out of the fierceness of four blockchain enthusiasts .
                                     The arrival of smart contracts on blockchain, initiated by the Ethereum network and
                                     then followed by others, has created in recent years a niche for nefarious and
@@ -38,6 +39,12 @@
                                     the coming years, in order to bring to the Blockchain, a security and a wider use
                                     through various awareness programs."
                                 </p>
+
+                                <a class="card-link text-warning" style="cursor: pointer;"
+                                 (click)="text1Height()" >
+                                    {{msg1}}
+                                </a>
+
                             </div>
                         </div>
                     </div>
@@ -53,22 +60,25 @@
 
 <!-- -----------------OUR TEAM------------------------ -->
 <section>
-
+     
+    <!-- for computer -->
     <div class="container_video d-none d-md-inline mt-5">
         <div class=" mt-5 mt-md-2 text-center mx-auto text-white">
             <div class="container">
                 <div class="heading">
-                    <h2>LET'S MAKE BLOCKCHAIN SAFER TOGETHER</h2>
+                    <h2>BST TEAM</h2>
                 </div>
 
                 <div class="row row-cols-md-2 row-cols-xl-4 text-white">
 
                     <div class="col mb-2">
-                        <div class="card bg-transparent" style="box-shadow: 0px 0px 5px 1px rgb(255,255,255);">
+                        <div
+                        class="card bg-transparent" 
+                        style="box-shadow: 0px 0px 5px 1px rgb(255,255,255);">
                             <div class="card-body">
                                 <h3 class="card-title">CEO</h3>
                                 <h3 class="card-title">Cristian Todasca</h3>
-                                <p class="card-text">
+                                <p >
                                     "Passionate about technology and self-taught since childhood, I started very early
                                     to dismantle all the mechanical or electronic objects that surrounded me in order to
                                     find their mode of operation.
@@ -88,6 +98,7 @@
                                     the coming years, in order to bring to the Blockchain, a security and a wider use
                                     through various awareness programs."
                                 </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -97,7 +108,7 @@
                             <div class="card-body">
                                 <h3 class="card-title">CFO</h3>
                                 <h3 class="card-title">Robert Buliga</h3>
-                                <p class="card-text">
+                                <p >
                                     " Confident in my ability to face every challenge from an early age, I came to have
                                     a special pleasure from business. Based on the experience of a business from the
                                     bottom, I was able to create some well-defined principles. I like to always be
@@ -105,6 +116,7 @@
                                     and I saw this as an opportunity to grow. I am determined to do my job well in this
                                     project, as well as to help the project work in the most competitive way possible."
                                 </p>
+                              
                             </div>
                         </div>
                     </div>
@@ -116,7 +128,7 @@
                             <div class="card-body">
                                 <h3 class="card-title">CTO</h3>
                                 <h3 class="card-title">Alexandru Tancau</h3>
-                                <p class="card-text">
+                                <p >
                                     "With a Bachelor Degree in International Affairs, and a luxury retail and
                                     hospitality background I have a huge passion for the blockchain technology as it
                                     represents the future of almost everything digital. For almost 4 years I have
@@ -133,6 +145,7 @@
                                     not stop working until I see this BST listed, fully developed and an autonomous
                                     project on the market."
                                 </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -153,6 +166,7 @@
                                     ambitious person who has developed a mature and responsible approach to any task
                                     that I undertake, or situation that I am presented with."
                                 </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -163,21 +177,29 @@
 
         </div>
     </div>
-
+    
+    <!-- for phone -->
     <div class="container_video d-inline d-md-none mt-5">
         <div class=" mt-5 mt-md-2 text-center mx-auto text-white">
             <div class="container">
                 <div class="heading">
-                    <h2>Special Skills</h2>
+                    <h2>BST TEAM</h2>
                 </div>
 
                 <div class="row row-cols-1 text-white">
-
+                    <!-- 1 -->
                     <div class="col-md-3 mb-2">
-                        <div class="card bg-transparent shadow border-0">
+                        <h3 class="text-center" (click)="btn_info1(); ">
+                            <button class=" btn btn-outline-light  "
+                                style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
+                                CEO <br> Cristian Todasca
+                            </button>
+                        </h3>
+
+                        <div *ngIf="info1" id="target1"
+                        class="card bg-transparent border-0"
+                        style="box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-body">
-                                <h3 class="card-title">CEO</h3>
-                                <h3 class="card-title">Cristian Todasca</h3>
                                 <p class="card-text">
                                     "Passionate about technology and self-taught since childhood, I started very early
                                     to dismantle all the mechanical or electronic objects that surrounded me in order to
@@ -203,10 +225,19 @@
                     </div>
 
                     <div class="col-md-3 mb-2">
-                        <div class="card bg-transparent shadow border-0">
+
+                        <h3 class="text-center" (click)="btn_info2()">
+                            <button class=" btn btn-outline-light  "
+                                style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
+                                CFO <br> Robert Buliga
+                            </button>
+                        </h3>
+
+                        <div *ngIf="info2"  id="target2"
+                        class="card bg-transparent border-0"
+                        style="box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-body">
-                                <h3 class="card-title">CFO</h3>
-                                <h3 class="card-title">Robert Buliga</h3>
+                                
                                 <p class="card-text">
                                     " Confident in my ability to face every challenge from an early age, I came to have
                                     a special pleasure from business. Based on the experience of a business from the
@@ -220,12 +251,21 @@
                     </div>
 
                     <div class="col-md-3 mb-2">
-                        <div class="card bg-transparent shadow border-0">
+
+                        <h3 class="text-center" (click)="btn_info3()">
+                            <button class=" btn btn-outline-light  "
+                                style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
+                                CTO <br> Alexandru Tancau
+                            </button>
+                        </h3>
+
+                        <div *ngIf="info3"  id="target3"
+                        class="card bg-transparent border-0"
+                        style="box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i>
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title">CTO</h3>
-                                <h3 class="card-title">Alexandru Tancau</h3>
+                                
                                 <p class="card-text">
                                     "With a Bachelor Degree in International Affairs, and a luxury retail and
                                     hospitality background I have a huge passion for the blockchain technology as it
@@ -248,12 +288,20 @@
                     </div>
 
                     <div class="col-md-3 mb-2">
-                        <div class="card bg-transparent shadow border-0">
+                        <h3 class="text-center" (click)="btn_info4()">
+                            <button class=" btn btn-outline-light  "
+                                style="font-size: 20px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
+                                CMO <br> Silviu Prunean
+                            </button>
+                        </h3>
+
+                        <div *ngIf="info4" id="target4"
+                        class="card bg-transparent border-0"
+                        style="box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-header bg-transparent border-0"><i class="icon ion-ios-gear-outline"></i>
                             </div>
                             <div class="card-body">
-                                <h3 class="card-title">CMO</h3>
-                                <h3 class="card-title">Silviu Prunean</h3>
+                               
                                 <p class="card-text">
                                     "I am a hardworking and ambitious individual with a great passion for the Crypto and
                                     trading industry. I have excellent communication skills, enabling me to effectively
@@ -278,7 +326,7 @@
 
 
 <!-- -------------------Contact US form---------------------- -->
-<section class="mt-5">
+<section class="mt-5" #target >
     <div class="container_video mt-5">
         <div class=" mt-5 mt-md-2 text-center mx-auto text-light">
             <div class="container">
@@ -288,7 +336,7 @@
                             style="font-size: 22px; box-shadow: 0px 0px 20px 2px rgb(255,255,255);">
                             <div class="card-body">
                                 <h3 class="card-title">Contact Us</h3>
-                                <p>For any questions please use this form. <br> 
+                                <p>For any questions please use this form. <br>
                                     Please kindly note that nonsense messages won't receive any answer from team . <br>
                                     Thank you ! BST team </p>
                                 <!--  -->
